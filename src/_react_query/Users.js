@@ -15,11 +15,11 @@ const Users = () => {
 
   return (
     <div>
-      {JSON.stringify(data)}
+      {JSON.stringify(data, undefined, 2)}
       Status : {status}
       <button
         type="button"
-        onClick={() => setUrl("http://localhost:8000/healthCheck")}
+        onClick={() => setUrl("http://localhost:8000/payment/all/:1/:10")}
       >
         Check Health
       </button>
