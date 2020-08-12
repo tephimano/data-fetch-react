@@ -3,10 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { SWRConfig } from "swr";
+import axios from "axios";
+
+const fetcher = (...args) => axios.get(...args).then((res) => res.data);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SWRConfig value={{ fetcher }}>
+      <App />
+    </SWRConfig>
   </React.StrictMode>,
   document.getElementById("root")
 );
