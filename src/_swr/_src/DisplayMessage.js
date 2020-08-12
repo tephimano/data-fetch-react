@@ -14,7 +14,7 @@ const DisplayMessage = () => {
       <button
         type="button"
         onClick={() => {
-          setUrl("/payment/all");
+          setUrl("/healthCheck");
         }}
       >
         Click Me!
